@@ -12,8 +12,7 @@ static Scanner sc = new Scanner(System.in);
 			try {
 				System.out.println("Choose you difficulty:\nEasy\nMedium\nHard");
 				choice = sc.nextInt();
-				if (choice > 3 || choice < 0) choice = "Err";
-				incorrect = false;
+				if (choice < 3 || choice > 0) incorrect = false;
 			}
 			catch (Exception e) {
 				System.err.println("Thats not a correct input");
@@ -26,6 +25,6 @@ static Scanner sc = new Scanner(System.in);
 		Main obj = new Main();
 		Character Player = obj.diffChoice();
 		System.out.println("Hello world!"); //this is a commeent
-		System.out.println(Player.health());
+		System.out.println(Player);
 	}
 }
